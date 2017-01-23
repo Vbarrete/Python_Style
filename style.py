@@ -3,10 +3,16 @@
 
 import os, sys
 
-l_fd = []
+l_file = []
 if len(sys.argv) == 1:
     print("Invalide Argument")
     exit()
 for i in range(1, len(sys.argv)-1):
     try:
-        l_fd.append(open())
+        fd = open(i, "r")
+    except:
+        print("Invalide Argument")
+        exit()
+    l_file.append(fd.read())
+    fd.close()
+
