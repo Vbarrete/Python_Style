@@ -2,6 +2,7 @@
 #!/usr/bin/env python
 
 import os, sys
+from patern import *
 
 l_file = []
 if len(sys.argv) == 1:
@@ -16,3 +17,4 @@ for i in range(1, len(sys.argv)-1):
     l_file.append(fd.read())
     fd.close()
 
+find_class_name(l_file)
