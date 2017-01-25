@@ -3,5 +3,7 @@
 
 import re
 
-class_name = re.compile("class (.*):")
-variable_name = 
+def find_class(file):
+    class_name = re.compile("class (.*):")
+    name = re.findall(class_name, file)
+    return name
