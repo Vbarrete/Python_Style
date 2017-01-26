@@ -4,6 +4,13 @@
 import os, sys
 from patern import *
 
+def style_class(name, file):
+    style_name = ""
+    split = name.split("_")
+    for i in split:
+        style_name += i[0].upper()
+    file.replace(name, style_name)
+
 l_file = []
 if len(sys.argv) == 1:
     print("Invalide Argument")
@@ -17,4 +24,8 @@ for i in range(1, len(sys.argv)-1):
     l_file.append(fd.read())
     fd.close()
 
-find_class(l_file)
+class_name = find_class(l_file)
+for i in class_name:
+    for j in l_file:
+        style_class(i, j)
+        
