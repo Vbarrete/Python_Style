@@ -17,4 +17,4 @@ for i in range(1, len(sys.argv)-1):
     l_file.append(fd.read())
     fd.close()
 
-find_class_name(l_file)
+find_class(l_file)
