@@ -3,7 +3,9 @@
 
 import re
 
-def find_class(file):
+def find_class(files):
     class_name = re.compile("class (.*):")
-    name = re.findall(class_name, file)
+    name = []
+    for i in files:
+        name += re.findall(class_name, i)
     return name
