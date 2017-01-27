@@ -32,4 +32,4 @@ for i in class_name:
 var_name = find_var(l_file)
 for i in var_name:
     for j in l_file:
-        j = style_class(i, j)
+        j = style_var(i, j)
