@@ -9,7 +9,7 @@ def style_class(name, file):
     split = name.split("_")
     for i in split:
         style_name += i[0].upper()
-    file.replace(name, style_name)
+    return file.replace(name, style_name)
 
 l_file = []
 if len(sys.argv) == 1:
@@ -27,5 +27,9 @@ for i in range(1, len(sys.argv)-1):
 class_name = find_class(l_file)
 for i in class_name:
     for j in l_file:
-        style_class(i, j)
-        
+        j = style_class(i, j)
+
+var_name = find_var(l_file)
+for i in var_name:
+    for j in l_file:
+        j = style_class(i, j)
