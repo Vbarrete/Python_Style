@@ -4,6 +4,11 @@
 import os, sys
 from patern import *
 
+def style_var(name, file):
+    style_name = ""
+    #TO DO
+    return file.replace(name, style_name)
+
 def style_class(name, file):
     style_name = ""
     split = name.split("_")
